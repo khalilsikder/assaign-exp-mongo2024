@@ -25,6 +25,19 @@ const createOrder = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         console.log(error);
     }
 });
+const getallProductOrder = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const result = order_service_1.OrderService.getAllOrders();
+        res.status(200).json({
+            success: true,
+            message: "product is order successfull",
+            data: result,
+        });
+    }
+    catch (error) {
+        console.log(error);
+    }
+});
 exports.orderController = {
-    createOrder
+    createOrder, getallProductOrder
 };
