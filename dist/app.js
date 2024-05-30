@@ -13,8 +13,9 @@ app.use((0, cors_1.default)());
 app.use('/api/products', product_route_1.ProductRoutes);
 app.use('/api/orders', order_route_1.orderRoutes);
 const getAController = (req, res) => {
-    const a = 5;
-    res.send(a);
+    res.status(200).json({
+        message: "hello world"
+    });
 };
 app.get('/', getAController);
 exports.default = app;

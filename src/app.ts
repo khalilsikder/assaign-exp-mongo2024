@@ -12,8 +12,9 @@ app.use('/api/products',ProductRoutes)
 app.use('/api/orders',orderRoutes)
 
 const getAController = (req:Request,res:Response) =>{
-const a = 5;
-res.send(a);
+res.status(200).json({
+    message:"hello world"
+})
 }
 
 app.get('/',getAController)
